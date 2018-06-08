@@ -75,7 +75,7 @@ class Board extends React.Component {
 		    const winner = calculateWinner(this.state.squares);
     let status;
     if (winner) {
-      status = 'Winner: ' + (this.state.XIsNext ? 'Hanne' : 'Niklas');
+      status = 'Winner: ' + (this.state ? 'Hanne' : 'Niklas');
     } else {
       status = 'Next player: ' + (this.state.XIsNext ? 'Hanne' : 'Niklas');
     }
@@ -106,15 +106,8 @@ class Board extends React.Component {
 }
 
 class Game extends React.Component {
-	 constructor(props) {
-    super(props);
-    this.state = {
-      history: [{
-        squares: Array(9).fill(null),
-      }],
-      XIsNext: true,
-    };
-  }
+
+  
 	
 	
 	
